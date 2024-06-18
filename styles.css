@@ -1,7 +1,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Didot', serif;
     background: #000; /* Dark background for gaming theme */
     overflow-x: hidden;
 }
@@ -120,6 +120,7 @@ section {
     align-items: center;
     justify-content: center;
     z-index: 10000;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 .loading-logo {
@@ -131,14 +132,15 @@ section {
     font-size: 2em;
     color: #fff;
     text-align: center;
-    animation: changeText 3s infinite;
+    animation: fadeTimer 1s infinite;
+    opacity: 0;
 }
 
-@keyframes changeText {
-    0% { content: "Loading..."; }
-    20% { content: "Cargando..."; }
-    40% { content: "Chargement..."; }
-    60% { content: "Laden..."; }
-    80% { content: "Загрузка..."; }
-    100% { content: "Loading..."; }
+@keyframes fadeTimer {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
 }
