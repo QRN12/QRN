@@ -16,6 +16,9 @@ header {
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 2px -2px gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header .logo {
@@ -25,8 +28,8 @@ header .logo {
 }
 
 header h1 {
-    display: inline;
     font-size: 2em;
+    margin: 0;
 }
 
 nav ul {
@@ -44,6 +47,11 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12; /* Change color on hover */
 }
 
 section {
