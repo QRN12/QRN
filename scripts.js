@@ -12,8 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(changeLoadingText, 1000);
 
     setTimeout(() => {
-        loadingScreen.style.opacity = '0';
-        loadingScreen.style.transform = 'translateY(-100%)';
+        loadingScreen.classList.add('morph');
         setTimeout(() => {
             loadingScreen.style.display = 'none';
             document.body.style.overflow = 'auto'; // Enable scrolling after loading screen
