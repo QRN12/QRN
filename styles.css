@@ -1,0 +1,97 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #000; /* Dark background for gaming theme */
+    overflow-x: hidden;
+    cursor: default; /* Show the default cursor */
+}
+
+header {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 1s;
+    color: #fff;
+}
+
+#section1 {
+    background: url('background1.jpg') no-repeat center center/cover; /* Background image */
+}
+
+#section2 {
+    background: url('background2.jpg') no-repeat center center/cover; /* Background image */
+}
+
+#section3 {
+    background: url('background3.jpg') no-repeat center center/cover; /* Background image */
+}
+
+#section4 {
+    background: url('background4.jpg') no-repeat center center/cover; /* Background image */
+}
+
+.content {
+    text-align: center;
+}
+
+.content h2 {
+    margin: 0;
+    font-size: 2.5em;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;
+}
+
+.content p {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out 0.3s;
+}
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease-out; /* Slow down the cursor follow */
+    z-index: 1001; /* Ensure cursor is above all elements */
+}
