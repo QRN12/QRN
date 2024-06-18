@@ -1,4 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const loadingScreen = document.getElementById('loading-screen');
+    const loadingText = document.getElementById('loading-text');
+    const languages = ["Loading...", "Cargando...", "Chargement...", "Laden...", "Загрузка..."];
+    let index = 0;
+
+    function changeLoadingText() {
+        loadingText.textContent = languages[index];
+        index = (index + 1) % languages.length;
+    }
+
+    setInterval(changeLoadingText, 1000);
+
+    setTimeout(() => {
+        loadingScreen.style.display = 'none';
+    }, 5000); // Hide loading screen after 5 seconds
+
+    // Existing cursor animation code
     const sections = document.querySelectorAll('section');
     const cursor = document.querySelector('.cursor');
     let mouseX = 0, mouseY = 0;
