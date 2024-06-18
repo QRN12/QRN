@@ -12,8 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(changeLoadingText, 1000);
 
     setTimeout(() => {
-        loadingScreen.style.display = 'none';
-    }, 5000); // Hide loading screen after 5 seconds
+        loadingScreen.style.opacity = '0';
+        loadingScreen.style.transform = 'translateY(-100%)';
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Enable scrolling after loading screen
+        }, 1000); // Ensure this matches the transition duration
+    }, 3000); // Hide loading screen after 3 seconds
 
     // Existing cursor animation code
     const sections = document.querySelectorAll('section');
