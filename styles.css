@@ -1,7 +1,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Didot', serif;
+    font-family: 'Verdana', sans-serif;
     background: #000; /* Dark background for gaming theme */
     overflow-x: hidden;
 }
