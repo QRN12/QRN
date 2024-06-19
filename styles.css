@@ -2,19 +2,19 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Dosis', sans-serif;
-    background: #f0f0f0; /* Merge header and body with Light Gray */
-    color: #000; /* Change text color to black */
+    background: #f0f0f0;
+    color: #000;
     overflow-x: hidden;
 }
 
 body.dark-mode {
-    background: #121212; /* Dark background */
-    color: #ffffff; /* Light text */
+    background: #121212;
+    color: #ffffff;
 }
 
 header {
-    background: #f0f0f0; /* Match header background with body */
-    color: #000; /* Change text color to black */
+    background: #f0f0f0;
+    color: #000;
     padding: 20px;
     text-align: center;
     position: fixed;
@@ -23,12 +23,12 @@ header {
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Adjust space for button */
+    justify-content: space-between;
 }
 
 header.dark-mode {
-    background: #1e1e1e; /* Darker header background */
-    color: #ffffff; /* Light text */
+    background: #1e1e1e;
+    color: #ffffff;
 }
 
 header nav ul {
@@ -44,29 +44,29 @@ header nav ul li {
 }
 
 header nav ul li:not(:last-child)::after {
-    content: '|'; /* Add a line between each word */
+    content: '|';
     position: absolute;
     right: -15px;
-    color: #000; /* Line color */
+    color: #000;
 }
 
 header.dark-mode nav ul li:not(:last-child)::after {
-    color: #ffffff; /* Light line color */
+    color: #ffffff;
 }
 
 header nav ul li a {
-    color: #000; /* Ensure navigation links are black */
+    color: #000;
     text-decoration: none;
     font-size: 1.2em;
     transition: color 0.3s;
 }
 
 header nav ul li a:hover {
-    color: #008080; /* Change hover color to Teal */
+    color: #008080;
 }
 
 header.dark-mode nav ul li a {
-    color: #ffffff; /* Ensure navigation links are white */
+    color: #ffffff;
 }
 
 section {
@@ -75,95 +75,83 @@ section {
     justify-content: center;
     align-items: center;
     transition: background 1s;
-    color: #000; /* Ensure section text is black */
+    color: #000;
 }
 
 body.dark-mode section {
-    background: #121212; /* Darker section background */
-    color: #ffffff; /* Light text */
+    background: #121212;
+    color: #ffffff;
 }
 
-#section1 {
-    background: #f0f0f0; /* Match section background with body */
-}
-
-#section2 {
-    background: #f0f0f0; /* Match section background with body */
-}
-
-#section3 {
-    background: #f0f0f0; /* Match section background with body */
-}
-
-#section4 {
-    background: #f0f0f0; /* Match section background with body */
+#section1, #section2, #section3, #section4 {
+    background: #f0f0f0;
 }
 
 body.dark-mode #section1,
 body.dark-mode #section2,
 body.dark-mode #section3,
 body.dark-mode #section4 {
-    background: #121212; /* Darker section background */
-    color: #ffffff; /* Light text */
+    background: #121212;
+    color: #ffffff;
 }
 
 .content {
     text-align: center;
-    color: inherit; /* Ensure text inherits the body color */
+    color: inherit;
 }
 
 .content h1 {
-    font-size: 2.5em; /* Increase size of the "I'm a" and typing text */
+    font-size: 2.5em;
     margin: 0;
-    color: inherit; /* Ensure the "I'm a" text is the same as the body color */
+    color: inherit;
 }
 
 body.dark-mode .content h1 {
-    color: inherit; /* Ensure the "I'm a" text is the same as the body color */
+    color: inherit;
 }
 
 .intro-text {
-    font-size: inherit; /* Ensure intro text inherits the font size from h1 */
+    font-size: inherit;
 }
 
 .typing-text {
-    font-size: inherit; /* Ensure typing text inherits the font size from h1 */
-    color: #228B22; /* Change typing text color to Teal */
-    border-right: .1em solid #228B22; 
+    font-size: inherit;
+    color: #228B22;
+    border-right: .1em solid #228B22;
     white-space: nowrap;
     overflow: hidden;
     animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
 }
 
 body.dark-mode .typing-text {
-    color: #80ff80; /* Light green text */
-    border-right: .1em solid #80ff80; /* Light green border */
+    color: #80ff80;
+    border-right: .1em solid #80ff80;
 }
 
 .content h2, .content p {
-    color: inherit; /* Ensure h2 and p inherit the body color */
+    color: inherit;
 }
 
 body.dark-mode .content h2,
 body.dark-mode .content p {
-    color: inherit; /* Ensure h2 and p inherit the body color */
+    color: inherit;
 }
 
 .cursor {
     width: 20px;
     height: 20px;
-    border: 2px solid #228B22; /* Change cursor to outlined circle in Teal */
+    border: 2px solid #228B22;
     border-radius: 50%;
-    position: fixed; /* Ensure it's always visible */
+    position: fixed;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    transition: transform 0.1s ease-out; /* Smooth bubble-like motion */
-    z-index: 1001; /* Ensure cursor is above all elements */
-    background: none; /* Remove the fill inside the circle */
+    transition: transform 0.1s ease-out;
+    z-index: 1001;
+    background: none;
 }
 
 body.dark-mode .cursor {
-    border: 2px solid #80ff80; /* Light green border in dark mode */
+    border: 2px solid #80ff80;
 }
 
 @keyframes typing {
