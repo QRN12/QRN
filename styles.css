@@ -120,7 +120,6 @@ section {
     align-items: center;
     justify-content: center;
     z-index: 10000;
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 .loading-logo {
@@ -143,23 +142,4 @@ section {
     50% {
         opacity: 1;
     }
-}
-
-@keyframes morphToScreen {
-    0% {
-        opacity: 1;
-        transform: scale(1);
-    }
-    50% {
-        opacity: 0.5;
-        transform: scale(0.5);
-    }
-    100% {
-        opacity: 0;
-        transform: scale(0);
-    }
-}
-
-.morph {
-    animation: morphToScreen 1s forwards;
 }
