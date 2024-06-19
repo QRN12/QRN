@@ -28,9 +28,19 @@ header .logo {
 }
 
 header h1 {
-    font-size: 2em;
+    font-size: 1.2em; /* Medium font size */
     margin: 0;
     color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+header h1 .typing-text {
+    font-size: 1.2em; /* Matching the font size */
+    color: #b19cd9; /* Purple color */
+    margin-left: 10px; /* Space between 'I'm' and the word */
+    position: relative;
+    white-space: nowrap;
 }
 
 nav ul {
@@ -113,10 +123,11 @@ section {
 /* Typing text animation styles */
 .typing-text {
     color: #b19cd9; /* Purple color for the animated text */
-    font-size: 1.5em; /* Adjust the font size to be smaller */
+    font-size: 1.2em; /* Adjusted font size to match 'I'm' */
     border-right: .1em solid #b19cd9; 
     white-space: nowrap;
     overflow: hidden;
+    margin-left: 10px; /* Space between 'I'm' and the word */
 }
 
 /* Updated keyframes for typing and erasing */
