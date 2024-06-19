@@ -12,11 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(changeLoadingText, 500); // Change text every 0.5 seconds
 
     setTimeout(() => {
-        loadingScreen.classList.add('morph');
-        setTimeout(() => {
-            loadingScreen.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Enable scrolling after loading screen
-        }, 2000); // Ensure this matches the transition duration
+        loadingScreen.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Enable scrolling after loading screen
     }, 5000); // Hide loading screen after 5 seconds
 
     // Existing cursor animation code
