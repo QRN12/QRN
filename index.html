@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css"> <!-- Include game styles -->
 </head>
 <body>
     <header>
@@ -43,6 +44,29 @@
         </div>
     </section>
 
+    <!-- New section for the game -->
+    <section id="section3">
+        <div class="game-container">
+            <div class="container noselect">
+                <div class="wrapper">
+                    <button id="replay">
+                        <i class="fas fa-play"></i>
+                        RESTART
+                    </button>
+                    <div id="canvas"></div>
+                    <div id="ui">
+                        <h2>SCORE</h2>
+                        <span id="score">00</span>
+                    </div>
+                </div>
+                <div id="author">
+                    <h1>SNAKE</h1> <span>Made by QRN</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="scripts.js"></script>
+    <script src="Script.js"></script> <!-- Include game scripts -->
 </body>
 </html>
