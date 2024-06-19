@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const loadingScreen = document.getElementById('loading-screen');
     const loadingText = document.getElementById('loading-text');
-    const languages = ["Loading...", "Cargando...", "Chargement...", "Laden...", "Загрузка..."];
+    const languages = ["Home", "Cargando...", "Chargement...", "Laden...", "Загрузка...", "홈...", "読み込み中...", "Caricamento...", "Carregando...", "加载中..."];
     let index = 0;
 
     function changeLoadingText() {
@@ -9,15 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
         index = (index + 1) % languages.length;
     }
 
-    setInterval(changeLoadingText, 1000);
+    setInterval(changeLoadingText, 500); // Change text every 0.5 seconds
 
     setTimeout(() => {
         loadingScreen.classList.add('morph');
         setTimeout(() => {
             loadingScreen.style.display = 'none';
             document.body.style.overflow = 'auto'; // Enable scrolling after loading screen
-        }, 1000); // Ensure this matches the transition duration
-    }, 3000); // Hide loading screen after 3 seconds
+        }, 2000); // Ensure this matches the transition duration
+    }, 5000); // Hide loading screen after 5 seconds
 
     // Existing cursor animation code
     const sections = document.querySelectorAll('section');
