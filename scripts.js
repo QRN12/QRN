@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Typing text animation code
     const typingTextElement = document.querySelector('.typing-text');
-    const texts = ["coder", "Network Eng", "Wireless Design", "Cyber"];
+    const texts = ["IT", "3D Designer", "WLC&AP Designer", "Game Dev", "Web Dev", "Analyst"];
     let textIndex = 0;
     let charIndex = 0;
     let typing = true;
