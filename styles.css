@@ -100,8 +100,8 @@ section {
 
 .typing-text {
     font-size: inherit; /* Ensure typing text inherits the font size from h1 */
-    color: #008080; /* Change typing text color to Teal */
-    border-right: .1em solid #008080; 
+    color: #228B22; /* Change typing text color to Teal */
+    border-right: .1em solid #228B22; 
     white-space: nowrap;
     overflow: hidden;
     animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
@@ -124,7 +124,7 @@ section {
 .cursor {
     width: 20px;
     height: 20px;
-    border: 2px solid #008080; /* Change cursor to outlined circle in Teal */
+    border: 2px solid #228B22; /* Change cursor to outlined circle in Teal */
     border-radius: 50%;
     position: fixed; /* Ensure it's always visible */
     pointer-events: none;
@@ -141,5 +141,5 @@ section {
 
 @keyframes blink-caret {
     from, to { border-color: transparent; }
-    50% { border-color: #008080; }
+    50% { border-color: #228B22; }
 }
