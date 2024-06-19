@@ -1,24 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const loadingScreen = document.getElementById('loading-screen');
-    const loadingText = document.getElementById('loading-text');
-    const languages = ["Loading...", "Cargando...", "Chargement...", "Laden...", "Загрузка..."];
-    let index = 0;
-
-    function changeLoadingText() {
-        loadingText.textContent = languages[index];
-        index = (index + 1) % languages.length;
-    }
-
-    setInterval(changeLoadingText, 1000);
-
-    setTimeout(() => {
-        loadingScreen.classList.add('morph');
-        setTimeout(() => {
-            loadingScreen.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Enable scrolling after loading screen
-        }, 1000); // Ensure this matches the transition duration
-    }, 3000); // Hide loading screen after 3 seconds
-
     // Existing cursor animation code
     const sections = document.querySelectorAll('section');
     const cursor = document.querySelector('.cursor');
@@ -62,4 +42,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     animateCursor();
+
+    // Typing text animation code
+    const typingTextElement = document.querySelector('.typing-text');
+    const texts = ["coder", "Network Eng", "Wireless Design", "Cyber"];
+    let textIndex = 0;
+    let charIndex = 0;
+    let typing = true;
+
+    function typeText() {
+        if (typing) {
+            if (charIndex < texts[textIndex].length) {
+                typingTextElement.textContent += texts[textIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(typeText, 100); // Typing speed
+            } else {
+                typing = false;
+                setTimeout(typeText, 2000); // Pause before erasing
+            }
+        } else {
+            if (charIndex > 0) {
+                typingTextElement.textContent = texts[textIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(typeText, 100); // Erasing speed
+            } else {
+                typing = true;
+                textIndex = (textIndex + 1) % texts.length;
+                setTimeout(typeText, 500); // Pause before typing the next word
+            }
+        }
+    }
+
+    typeText(); // Start the typing animation
 });
