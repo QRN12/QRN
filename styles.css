@@ -23,7 +23,7 @@ header {
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center; /* Center the navigation */
 }
 
 header.dark-mode {
@@ -36,6 +36,7 @@ header nav ul {
     padding: 0;
     display: flex;
     align-items: center;
+    justify-content: center; /* Center the items within the nav */
 }
 
 header nav ul li {
@@ -83,13 +84,12 @@ body.dark-mode section {
     color: #ffffff;
 }
 
-#section1, #section2, #section3, #section4 {
+#section1, #section2, #section4 {
     background: #f0f0f0;
 }
 
 body.dark-mode #section1,
 body.dark-mode #section2,
-body.dark-mode #section3,
 body.dark-mode #section4 {
     background: #121212;
     color: #ffffff;
