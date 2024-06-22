@@ -226,3 +226,44 @@ body.dark-mode @keyframes blink-caret {
     from, to { border-color: transparent; }
     50% { border-color: #80ff80; }
 }
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+    margin-left: 20px; /* Add some space from the navigation */
+}
+
+.switch-circle {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.4s, background-color 0.4s, box-shadow 0.4s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.switch.active {
+    background-color: #4b9dea;
+}
+
+.switch.active .switch-circle {
+    transform: translateX(30px);
+    background-color: #000;
+}
+
+body.dark-mode .switch {
+    background-color: #555;
+}
+
+body.dark-mode .switch-circle {
+    background-color: #fff;
+}
