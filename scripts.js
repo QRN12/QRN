@@ -87,19 +87,15 @@ document.addEventListener('DOMContentLoaded', () => {
     typeText(); // Start the typing animation
 
     // Dark mode toggle
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    darkModeToggle.addEventListener('click', () => {
+    const darkModeSwitch = document.getElementById('darkModeSwitch');
+    darkModeSwitch.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
         document.querySelector('header').classList.toggle('dark-mode');
         const contentElements = document.querySelectorAll('.content, h2, p');
         contentElements.forEach(element => {
             element.classList.toggle('dark-mode');
         });
-        if (document.body.classList.contains('dark-mode')) {
-            darkModeToggle.textContent = 'Light Mode';
-        } else {
-            darkModeToggle.textContent = 'Dark Mode';
-        }
+        darkModeSwitch.classList.toggle('active');
     });
 
     // Three.js setup
